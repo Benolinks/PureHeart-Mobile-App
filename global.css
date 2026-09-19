@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@theme{
+
+   /* --PlusJakartaSans-SemiBold: 'PlusJakartaSans-SemiBold'; */
+   --font-jakarta-bold: 'PlusJakartaSans-Bold';
+   --font-jakarta-extrabold: 'PlusJakartaSans-ExtraBold';
+   /* --PlusJakartaSans-Light: 'PlusJakartaSans-Light'; */
+   --font-jakarta-medium: 'PlusJakartaSans-Medium';
+   --font-jakarta-italics: 'PlusJakartaSans-Italics';
+
+   --font-jakarta-regular: "PlusJakartaSansRegular";
+   /* --PlusJakartaSans-Thin: 'PlusJakartaSans-Thin'; */
+   /* --PlusJakartaSans-Black: 'PlusJakartaSans-Black'; */
+   /* --PlusJakartaSans-ExtraLight: 'PlusJakartaSans-ExtraLight'; */
+
+
+   /* --PlusJakartaSans-LightItalic: 'PlusJakartaSans-LightItalic'; */
+
+    /* --PlusJakartaSans-MediumItalic: 'PlusJakartaSans-MediumItalic'; */
+
+    /* --PlusJakartaSans-ExtraBoldItalic: 'PlusJakartaSans-ExtraBoldItalic'; */
+
+    /* --PlusJakartaSans-RegularItalic: 'PlusJakartaSans-RegularItalic'; */
+
+    /* --PlusJakartaSans-BlackItalics: 'PlusJakartaSans-BlackItalics'; */
+
+
+    
+}

@@ -20,6 +20,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
@@ -31,6 +32,35 @@
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+
+      [
+        "expo-font",
+        {
+          "fonts": [
+
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Bold.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBold.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Light.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf" ,
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Thin.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraLight.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Black.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBoldItalic.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-BoldItalic.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraLightItalic.ttf",
+            // "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Italic.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-LightItalic.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-MediumItalic.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-RegularItalic.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBoldItalic.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ThinItalic.ttf",
+            "./assets/Plus_Jakarta_Sans/static/PlusJakartaSans-BlackItalic.ttf"
+
+          ]
         }
       ]
     ],
