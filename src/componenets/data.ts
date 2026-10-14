@@ -2,13 +2,14 @@
 // Keeping it in one place means we only update data in one spot.
 
 export type Property = {
-  id: string;
+  id: string | number;
   image: string;
   category: string;
+  position:number
   baths: number;
   beds: number;
   sqft: number;
-  price: number;
+  price: number | string;
   title: string;
   location: string;
   rating: number;
@@ -23,6 +24,7 @@ export const properties: Property[] = [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80",
     
     category: "Appartments",
+    position:300,
     baths: 2,
     beds: 2,
     sqft: 1200,
@@ -40,6 +42,7 @@ export const properties: Property[] = [
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80",
     
     category: "Appartments",
+    position:700,
     baths: 3,
     beds: 3,
     sqft: 1800,
@@ -57,6 +60,7 @@ export const properties: Property[] = [
       "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80",
     
     category: "Villa",
+    position:1400,
     baths: 4,
     beds: 5,
     sqft: 3200,

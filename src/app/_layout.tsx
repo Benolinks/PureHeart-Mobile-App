@@ -2,7 +2,9 @@ import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import "../../global.css";
 import { useEffect } from "react";
+import { Platform } from 'react-native';
 
+export const unstable_settings = { anchor: 'index' };
 
 export default function RootLayout() {
 
@@ -46,14 +48,27 @@ export default function RootLayout() {
     return null; 
   }
 
+  return(
+ <Stack>
+      <Stack.Screen name="(tabs)"  options={{headerShown:false}}/>
+       <Stack.Screen
+        name="property/[id]"
+        options={{
+      
+          presentation: 'formSheet',
+          headerShown: false,
+          sheetAllowedDetents: [0.8],
+        }}
+
+      /> 
+    </Stack>
 
 
 
 
 
 
+      )
 
-
-  return <Stack screenOptions={{ headerShown: false }} />;
 }
 

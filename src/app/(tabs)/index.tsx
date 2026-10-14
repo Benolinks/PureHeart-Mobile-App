@@ -1,8 +1,8 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { properties } from "../../componenets/data";
+import { properties, Property } from "../../componenets/data";
 import { router } from "expo-router";
 import { Image } from "expo-image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   ScrollView,
   Text,
@@ -33,9 +33,19 @@ const App = () => {
 
   const [heart, SetHeart] = useState<number | null>(null);
 
+  const scrollRef = useRef<ScrollView>(null);
+
+  const goToPosition = (position: number) => {
+    scrollRef.current?.scrollTo({
+      y: position,
+      animated: true,
+    });
+  };
+
   return (
     <SafeAreaView className="flex-1 p-3  bg-orange-100">
       <ScrollView
+        ref={scrollRef}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 50 }}
       >
@@ -115,12 +125,19 @@ const App = () => {
             </ScrollView>
           </View>
 
-          {/* view for Apartments  */}
+          {/* view for Apartments and images  */}
 
           {properties.map((property, index) => (
-            <TouchableOpacity onPress={() => router.push("/favourites")}>
+            <Pressable
+              onPress={() => {
+                goToPosition(property.position);
+                // Delay navigation for 5 seconds
+                setTimeout(() => {
+                  router.push(`../property/${property.id}`);
+                }, 500);
+              }}
+            >
               <View
-                key={property.id}
                 className="p-1 mt-4 shadow-2xl
              shadow-gray-100 border 
              border-red-200 
@@ -131,6 +148,7 @@ const App = () => {
                   style={{ width: "100%", height: 220, borderRadius: 15 }}
                   contentFit="cover"
                 />
+
                 {/* view for Apartmaent icon */}
 
                 <View
@@ -153,10 +171,7 @@ const App = () => {
                 </View>
                 {/* for price qnd room type  */}
 
-                <View
-                  className="flex-row justify-between mx-5 my-5"
-                  key={index}
-                >
+                <View className="flex-row justify-between mx-5 my-5">
                   <View className="flex-row  justify-evenly w-40">
                     <Text className=" text-lg">{property.baths}.Baths </Text>
                     <Text className=" text-lg">{property.beds}.Beds </Text>
@@ -177,7 +192,7 @@ const App = () => {
                   <Text className="font-bold text-3xl">{property.title}</Text>
                 </View>
 
-                {/* for price qnd room type  */}
+                {/* for location  qnd ratig */}
                 <View
                   className="flex-row justify-between w-[85%]
                        m-auto align-middle items-center"
@@ -199,7 +214,7 @@ const App = () => {
                   </View>
                 </View>
               </View>
-            </TouchableOpacity>
+            </Pressable>
           ))}
         </View>
       </ScrollView>
